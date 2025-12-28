@@ -3,6 +3,8 @@ package com.example.threaddit.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Table(name = "communities")
 @Getter
@@ -28,6 +30,6 @@ public class Community {
 
 	@Column(nullable = false, updatable = false)
 	@Builder.Default
-	private java.time.LocalDateTime createdAt = java.time.LocalDateTime.now();
+	private LocalDateTime createdAt = LocalDateTime.now();
 }
 

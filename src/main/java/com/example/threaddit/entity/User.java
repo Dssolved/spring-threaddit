@@ -3,6 +3,7 @@ package com.example.threaddit.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -31,7 +32,7 @@ public class User {
 
 	@Column(nullable = false, updatable = false)
 	@Builder.Default
-	private java.time.LocalDateTime createdAt = java.time.LocalDateTime.now();
+	private LocalDateTime createdAt = LocalDateTime.now();
 
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(
